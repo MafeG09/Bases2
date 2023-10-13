@@ -1,0 +1,70 @@
+CREATE TABLE paquete (
+    id_paquete            NUMBER(10) NOT NULL,
+    nombre                VARCHAR2(50),
+    descripcion           VARCHAR2(100),
+    duracion              VARCHAR2(20),
+    precio_persona        NUMBER(10, 2),
+    politicas_cancelacion VARCHAR2(100),
+    id_hotel              NUMBER(10) NOT NULL
+)
+LOGGING;
+
+ALTER TABLE paquete ADD CONSTRAINT paquete_pk PRIMARY KEY ( id_paquete );
+
+ALTER TABLE paquete
+    ADD CONSTRAINT fk_paquete_hotel FOREIGN KEY ( id_hotel )
+        REFERENCES hotel ( id_hotel )
+    NOT DEFERRABLE;
+	
+INSERTS
+
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (1, 'Paquete Aventura en la Playa', 'Excursiones diarias, deportes acuáticos', '7 días', 4500000.00, 'Cancelación gratuita hasta 72 horas antes', 4);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (2, 'Paquete de Luna de Miel', 'Disfrute de su luna de miel en un paraíso tropical', '10 días', 9000000.00, 'Cancelación gratuita hasta 48 horas antes', 12);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (3, 'Paquete Escapada Romántica', 'Fin de semana romántico para parejas', '3 días', 1800000.00, 'Cancelación gratuita hasta 24 horas antes', 5);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (4, 'Paquete Familiar en la Montaña', 'Actividades para toda la familia', '5 días', 3200000.00, 'Cancelación gratuita hasta 48 horas antes', 15);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (5, 'Paquete Aventura en la Selva', 'Senderismo, avistamiento de vida silvestre', '7 días', 4800000.00, 'Cancelación gratuita hasta 72 horas antes', 40);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (6, 'Paquete de Bodas en la Playa', 'Ceremonia y recepción en la playa', '3 días', 12000000.00, 'Cancelación gratuita hasta 48 horas antes', 22);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (7, 'Paquete Relajación y Bienestar', 'Spa, yoga, tratamientos de belleza', '4 días', 3200000.00, 'Cancelación gratuita hasta 24 horas antes', 16);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (8, 'Paquete Cultural en la Ciudad', 'Visitas a museos, teatro, restaurantes', '6 días', 3600000.00, 'Cancelación gratuita hasta 48 horas antes', 28);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (9, 'Paquete de Aventura en la Montaña', 'Escalada, senderismo, camping', '5 días', 4400000.00, 'Cancelación gratuita hasta 72 horas antes', 31);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (10, 'Paquete Gastronómico en la Ciudad', 'Degustación de platos locales', '3 días', 2400000.00, 'Cancelación gratuita hasta 24 horas antes', 6);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (11, 'Paquete Aventura en la Selva Amazónica', 'Exploración de la selva, avistamiento de vida silvestre', '8 días', 6000000.00, 'Cancelación gratuita hasta 48 horas antes', 40);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (12, 'Paquete de Aventura en la Montaña', 'Senderismo, rafting, parapente', '6 días', 5200000.00, 'Cancelación gratuita hasta 72 horas antes', 37);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (13, 'Paquete Relajación en la Playa', 'Spa, yoga en la playa', '4 días', 4400000.00, 'Cancelación gratuita hasta 48 horas antes', 18);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (14, 'Paquete Cultural en la Ciudad', 'Visitas a museos, recorridos históricos', '5 días', 4800000.00, 'Cancelación gratuita hasta 24 horas antes', 9);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (15, 'Paquete de Bodas en el Paraíso', 'Ceremonia en la playa, cena elegante', '3 días', 14400000.00, 'Cancelación gratuita hasta 72 horas antes', 24);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (16, 'Paquete de Aventura en la Montaña', 'Escalada, senderismo, rafting', '6 días', 4800000.00, 'Cancelación gratuita hasta 48 horas antes', 37);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (17, 'Paquete Romántico en la Ciudad', 'Estadía en hotel de lujo, cena romántica', '3 días', 2600000.00, 'Cancelación gratuita hasta 24 horas antes', 2);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (18, 'Paquete de Luna de Miel en la Playa', 'Luna de miel en una villa privada', '10 días', 16500000.00, 'Cancelación gratuita hasta 48 horas antes', 20);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (19, 'Paquete Escapada Romántica', 'Fin de semana romántico para parejas', '2 días', 1600000.00, 'Cancelación gratuita hasta 24 horas antes', 14);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (20, 'Paquete Aventura en la Selva', 'Senderismo, expedición en la selva', '6 días', 5600000.00, 'Cancelación gratuita hasta 72 horas antes', 40);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (21, 'Paquete de Luna de Miel', 'Disfrute de su luna de miel en un destino exótico', '12 días', 14000000.00, 'Cancelación gratuita hasta 48 horas antes', 10);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (22, 'Paquete Gastronómico en la Ciudad', 'Degustación de platos locales, recorridos culinarios', '4 días', 3000000.00, 'Cancelación gratuita hasta 24 horas antes', 27);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (23, 'Paquete de Bodas en la Playa', 'Ceremonia en la playa, recepción en el jardín', '3 días', 12800000.00, 'Cancelación gratuita hasta 48 horas antes', 19);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (24, 'Paquete Cultural en la Ciudad', 'Visitas a museos, espectáculos teatrales', '5 días', 3600000.00, 'Cancelación gratuita hasta 48 horas antes', 11);
+INSERT INTO paquete (id_paquete, nombre, descripcion, duracion, precio_persona, politicas_cancelacion, id_hotel)
+VALUES (25, 'Paquete de Aventura en la Montaña', 'Senderismo, escalada, camping', '7 días', 5000000.00, 'Cancelación gratuita hasta 72 horas antes', 25);

@@ -1,0 +1,60 @@
+CREATE TABLE carro (
+    id_carro   NUMBER(10) NOT NULL,
+    marca      VARCHAR2(50),
+    modelo     VARCHAR2(50),
+    tipo       VARCHAR2(20),
+    gama       VARCHAR2(20),
+    precio_dia NUMBER(10, 2),
+    id_hotel   NUMBER(10) NOT NULL
+)
+LOGGING;
+
+ALTER TABLE carro ADD CONSTRAINT carro_pk PRIMARY KEY ( id_carro );
+
+ALTER TABLE carro
+    ADD CONSTRAINT fk_carro_hotel FOREIGN KEY ( id_hotel )
+        REFERENCES hotel ( id_hotel )
+    NOT DEFERRABLE;
+
+INSERTS
+
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (1, 'Toyota', 'Corolla', 'Sedán', 'Económico', 130000, 1);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (2, 'Ford', 'Escape', 'SUV', 'Estándar', 150000, 2);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (3, 'Honda', 'Civic', 'Sedán', 'Económico', 130000, 3);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (4, 'Jeep', 'Wrangler', 'SUV', 'Lujo', 200000, 4);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (5, 'Nissan', 'Altima', 'Sedán', 'Estándar', 150000, 5);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (6, 'Ford', 'F-150', 'Camioneta', 'Estándar', 180000, 6);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (7, 'Chevrolet', 'Cruze', 'Sedán', 'Económico', 130000, 7);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (8, 'Toyota', 'Rav4', 'SUV', 'Estándar', 150000, 8);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (9, 'Volkswagen', 'Jetta', 'Sedán', 'Económico', 130000, 9);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (10, 'Jeep', 'Grand Cherokee', 'SUV', 'Lujo', 200000, 10);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (11, 'Honda', 'CR-V', 'SUV', 'Estándar', 150000, 11);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (12, 'Chevrolet', 'Malibu', 'Sedán', 'Económico', 130000, 12);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (13, 'Ford', 'Explorer', 'SUV', 'Lujo', 200000, 13);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (14, 'Toyota', 'Camry', 'Sedán', 'Estándar', 150000, 14);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (15, 'Nissan', 'Rogue', 'SUV', 'Estándar', 150000, 15);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (16, 'Volkswagen', 'Passat', 'Sedán', 'Económico', 130000, 16);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (17, 'Jeep', 'Cherokee', 'SUV', 'Lujo', 200000, 17);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (18, 'Chevrolet', 'Spark', 'Compacto', 'Económico', 120000, 18);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (19, 'Ford', 'Mustang', 'Deportivo', 'Lujo', 200000, 19);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (20, 'Toyota', 'Tacoma', 'Camioneta', 'Estándar', 180000, 20);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (21, 'Hyundai', 'Elantra', 'Sedán', 'Económico', 130000, 21);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (22, 'Mazda', 'CX-5', 'SUV', 'Estándar', 150000, 22);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (23, 'Kia', 'Optima', 'Sedán', 'Económico', 130000, 23);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (24, 'Ford', 'Edge', 'SUV', 'Lujo', 200000, 24);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (25, 'Chevrolet', 'Trax', 'SUV', 'Estándar', 150000, 25);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (26, 'Nissan', 'Versa', 'Sedán', 'Económico', 130000, 26);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (27, 'Jeep', 'Compass', 'SUV', 'Lujo', 200000, 27);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (28, 'Toyota', 'Yaris', 'Compacto', 'Económico', 120000, 28);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (29, 'Ford', 'Focus', 'Sedán', 'Económico', 130000, 29);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (30, 'Hyundai', 'Santa Fe', 'SUV', 'Estándar', 150000, 30);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (31, 'Mazda', 'Mazda3', 'Sedán', 'Económico', 130000, 31);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (32, 'Kia', 'Sportage', 'SUV', 'Estándar', 150000, 32);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (33, 'Ford', 'Fiesta', 'Compacto', 'Económico', 120000, 33);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (34, 'Chevrolet', 'Equinox', 'SUV', 'Estándar', 150000, 34);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (35, 'Nissan', 'Sentra', 'Sedán', 'Económico', 130000, 35);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (36, 'Jeep', 'Renegade', 'SUV', 'Estándar', 150000, 36);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (37, 'Toyota', 'Camry', 'Sedán', 'Económico', 130000, 37);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (38, 'Hyundai', 'Tucson', 'SUV', 'Estándar', 150000, 38);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (39, 'Ford', 'Focus', 'Sedán', 'Económico', 130000, 39);
+INSERT INTO carro (id_carro, marca, modelo, tipo, gama, precio_dia, id_hotel) VALUES (40, 'Chevrolet', 'Traverse', 'SUV', 'Lujo', 200000, 40);

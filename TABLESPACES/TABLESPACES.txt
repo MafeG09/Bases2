@@ -1,0 +1,33 @@
+-- Crear los tablespaces
+CREATE TABLESPACE dept_ciudad_tsv DATAFILE 'C:\universidad_LOPEZ_JUAN_CAMACHO_MAFE\bases\tablespaces\empresa\dept_ciudad_ts.dat' SIZE 5M;
+CREATE TABLESPACE hotel_empleado_rol_tsv DATAFILE 'C:\universidad_LOPEZ_JUAN_CAMACHO_MAFE\bases\tablespaces\empresa\hotel_empleado_rol_ts.dat' SIZE 5M;
+CREATE TABLESPACE cliente_tsv DATAFILE 'C:\universidad_LOPEZ_JUAN_CAMACHO_MAFE\bases\tablespaces\empresa\cliente_ts.dat' SIZE 5M;
+CREATE TABLESPACE reserva_carro_tsv DATAFILE 'C:\universidad_LOPEZ_JUAN_CAMACHO_MAFE\bases\tablespaces\empresa\reserva_carro_ts.dat' SIZE 5M;
+CREATE TABLESPACE reserva_hotel_habitacion_tsv DATAFILE 'C:\universidad_LOPEZ_JUAN_CAMACHO_MAFE\bases\tablespaces\empresa\reserva_hotel_habitacion_ts.dat' SIZE 5M;
+CREATE TABLESPACE compra_paquete_tsv DATAFILE 'C:\universidad_LOPEZ_JUAN_CAMACHO_MAFE\bases\tablespaces\empresa\compra_paquete_ts.dat' SIZE 5M;
+CREATE TABLESPACE compra_articulo_tsv DATAFILE 'C:\universidad_LOPEZ_JUAN_CAMACHO_MAFE\bases\tablespaces\empresa\compra_articulo_ts.dat' SIZE 5M;
+
+-- Asignar las tablas a los tablespaces
+ALTER TABLE departamento MOVE TABLESPACE dept_ciudad_tsv;
+ALTER TABLE ciudad MOVE TABLESPACE dept_ciudad_tsv;
+ALTER TABLE hotel MOVE TABLESPACE hotel_empleado_rol_tsv;
+ALTER TABLE empleado MOVE TABLESPACE hotel_empleado_rol_tsv;
+ALTER TABLE rol MOVE TABLESPACE hotel_empleado_rol_tsv;
+ALTER TABLE cliente MOVE TABLESPACE cliente_tsv;
+ALTER TABLE reserva_carro MOVE TABLESPACE reserva_carro_tsv;
+ALTER TABLE detalle_reserva_carro MOVE TABLESPACE reserva_carro_tsv;
+ALTER TABLE historial_reserva_carro MOVE TABLESPACE reserva_carro_tsv;
+ALTER TABLE carro MOVE TABLESPACE reserva_carro_tsv;
+ALTER TABLE reserva_hotel MOVE TABLESPACE reserva_hotel_habitacion_tsv;
+ALTER TABLE detalle_reserva_hotel MOVE TABLESPACE reserva_hotel_habitacion_tsv;
+ALTER TABLE historial_reserva_hotel MOVE TABLESPACE reserva_hotel_habitacion_tsv;
+ALTER TABLE habitacion MOVE TABLESPACE reserva_hotel_habitacion_tsv;
+ALTER TABLE compra_paquete MOVE TABLESPACE compra_paquete_tsv;
+ALTER TABLE detalle_compra_paquete MOVE TABLESPACE compra_paquete_tsv;
+ALTER TABLE historial_compra_paquete MOVE TABLESPACE compra_paquete_tsv;
+ALTER TABLE paquete MOVE TABLESPACE compra_paquete_tsv;
+ALTER TABLE compra_articulo MOVE TABLESPACE compra_articulo_tsv;
+ALTER TABLE detalle_compra_articulo MOVE TABLESPACE compra_articulo_tsv;
+ALTER TABLE historial_compra_articulo MOVE TABLESPACE compra_articulo_tsv;
+ALTER TABLE articulo MOVE TABLESPACE compra_articulo_tsv;
+

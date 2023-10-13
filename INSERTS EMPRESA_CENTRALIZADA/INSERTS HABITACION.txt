@@ -1,0 +1,118 @@
+CREATE TABLE habitacion (
+    id_habitacion NUMBER(10) NOT NULL,
+    id_hotel      NUMBER(10) NOT NULL,
+    nivel         VARCHAR2(20),
+    capacidad     NUMBER(5),
+    precio_noche  NUMBER(10, 2)
+)
+LOGGING;
+
+ALTER TABLE habitacion ADD CONSTRAINT habitacion_pk PRIMARY KEY ( id_habitacion );
+
+ALTER TABLE habitacion
+    ADD CONSTRAINT fk_habitacion_hotel FOREIGN KEY ( id_hotel )
+        REFERENCES hotel ( id_hotel )
+    NOT DEFERRABLE;
+	
+INSERTS
+
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (1, 2, 'Económica', 2, 120000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (2, 2, 'Estándar', 2, 180000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (3, 4, 'Estándar', 2, 150000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (4, 5, 'Superior', 3, 250000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (5, 6, 'Económica', 2, 100000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (6, 6, 'Estándar', 2, 150000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (7, 6, 'Suite', 4, 300000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (8, 9, 'Estándar', 2, 160000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (9, 10, 'Estándar', 2, 170000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (10, 11, 'Superior', 3, 260000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (11, 12, 'Económica', 2, 140000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (12, 14, 'Estándar', 2, 180000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (13, 15, 'Económica', 2, 120000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (14, 16, 'Suite', 4, 350000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (15, 18, 'Estándar', 2, 190000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (16, 19, 'Superior', 3, 280000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (17, 20, 'Estándar', 2, 170000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (18, 22, 'Estándar', 2, 160000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (19, 24, 'Económica', 2, 130000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (20, 25, 'Estándar', 2, 200000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (21, 27, 'Económica', 2, 110000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (22, 28, 'Suite', 4, 380000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (23, 31, 'Estándar', 2, 220000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (24, 37, 'Superior', 3, 270000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (25, 40, 'Estándar', 2, 210000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (26, 2, 'Suite', 4, 300000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (27, 4, 'Suite', 4, 250000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (28, 5, 'Superior', 3, 280000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (29, 6, 'Suite', 4, 320000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (30, 9, 'Superior', 3, 230000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (31, 10, 'Suite', 4, 360000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (32, 11, 'Estándar', 2, 200000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (33, 12, 'Superior', 3, 260000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (34, 14, 'Suite', 4, 340000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (35, 15, 'Económica', 2, 140000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (36, 16, 'Económica', 2, 120000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (37, 18, 'Superior', 3, 270000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (38, 19, 'Económica', 2, 130000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (39, 20, 'Económica', 2, 150000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (40, 22, 'Estándar', 2, 190000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (41, 24, 'Económica', 2, 110000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (42, 25, 'Superior', 3, 290000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (43, 27, 'Económica', 2, 100000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (44, 28, 'Estándar', 2, 180000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (45, 31, 'Suite', 4, 340000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (46, 37, 'Económica', 2, 120000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (47, 40, 'Superior', 3, 270000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (48, 2, 'Económica', 2, 140000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (49, 4, 'Estándar', 2, 170000.00);
+INSERT INTO habitacion (id_habitacion, id_hotel, nivel, capacidad, precio_noche)
+VALUES (50, 5, 'Estándar', 2, 160000.00);

@@ -1,0 +1,82 @@
+CREATE TABLE empleado (
+    id_empleado      NUMBER(10) NOT NULL,
+    nombre           VARCHAR2(50) NOT NULL,
+    correo           VARCHAR2(50) NOT NULL,
+    telefono         VARCHAR2(20),
+    id_rol           NUMBER(10) NOT NULL,
+    id_administrador NUMBER(10),
+    id_ciudad        NUMBER(10) NOT NULL
+)
+LOGGING;
+
+ALTER TABLE empleado ADD CONSTRAINT empleado_pk PRIMARY KEY ( id_empleado );
+
+ALTER TABLE empleado ADD CONSTRAINT index_2 UNIQUE ( correo );
+
+ALTER TABLE empleado
+    ADD CONSTRAINT fk_empleado_administrador FOREIGN KEY ( id_administrador )
+        REFERENCES empleado ( id_empleado )
+    NOT DEFERRABLE;
+
+ALTER TABLE empleado
+    ADD CONSTRAINT fk_empleado_ciudad FOREIGN KEY ( id_ciudad )
+        REFERENCES ciudad ( id_ciudad )
+    NOT DEFERRABLE;
+
+ALTER TABLE empleado
+    ADD CONSTRAINT fk_empleado_rol FOREIGN KEY ( id_rol )
+        REFERENCES rol ( id_rol )
+    NOT DEFERRABLE;
+
+INSERTS
+
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (1, 'Juan Pérez', 'juan.perez@email.com', '3147691370', 1, NULL, 1);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (2, 'María López', 'maria.lopez@email.com', '3104205628', 2, NULL, 2);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (3, 'Carlos Rodríguez', 'carlos.rodriguez@email.com', '3009876543', 3, 1, 3);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (4, 'Ana Gómez', 'ana.gomez@email.com', '3015557777', 2, 1, 4);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (5, 'Pedro Martínez', 'pedro.martinez@email.com', '3108889999', 1, 2, 5);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (6, 'Luisa Fernández', 'luisa.fernandez@email.com', '3161234567', 2, 3, 6);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (7, 'Jorge Vargas', 'jorge.vargas@email.com', '3139876543', 3, 4, 7);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (8, 'Carmen Silva', 'carmen.silva@email.com', '3125551234', 1, 5, 8);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (9, 'Ricardo Ramírez', 'ricardo.ramirez@email.com', '3147778888', 2, 6, 9);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (10, 'Marta González', 'marta.gonzalez@email.com', '3101234567', 1, 7, 10);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (11, 'Fernando Sánchez', 'fernando.sanchez@email.com', '3119876543', 3, 8, 11);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (12, 'Lorena Torres', 'lorena.torres@email.com', '3126669999', 2, 9, 12);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (13, 'Roberto Montes', 'roberto.montes@email.com', '3131112222', 1, 10, 13);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (14, 'Isabel Jiménez', 'isabel.jimenez@email.com', '3159990000', 2, 11, 14);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (15, 'Alejandro Cárdenas', 'alejandro.cardenas@email.com', '3105551111', 1, 12, 15);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (16, 'Laura Vélez', 'laura.velez@email.com', '3149992222', 2, 13, 16);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (17, 'Sergio Mendoza', 'sergio.mendoza@email.com', '3126665555', 3, 14, 17);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (18, 'Natalia Ortega', 'natalia.ortega@email.com', '3158887777', 2, 15, 18);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (19, 'Andrés Soto', 'andres.soto@email.com', '3102227777', 1, 16, 19);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (20, 'Valentina Castillo', 'valentina.castillo@email.com', '3131110000', 2, 17, 20);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (21, 'Gabriel Ramírez', 'gabriel.ramirez@email.com', '3127775555', 3, 18, 21);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (22, 'Ana María Fernández', 'ana.fernandez@email.com', '3143339999', 1, 19, 22);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (23, 'Javier Paredes', 'javier.paredes@email.com', '3154440000', 2, 20, 23);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (24, 'Sofía López', 'sofia.lopez@email.com', '3101117777', 1, 21, 24);
+INSERT INTO empleado (id_empleado, nombre, correo, telefono, id_rol, id_administrador, id_ciudad)
+VALUES (25, 'Eduardo Gómez', 'eduardo.gomez@email.com', '3133334444', 2, 22, 25);

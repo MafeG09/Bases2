@@ -1,0 +1,98 @@
+CREATE TABLE historial_reserva_carro (
+    id_historial    NUMBER(10) NOT NULL,
+    id_reserva      NUMBER(10) NOT NULL,
+    estado_anterior VARCHAR2(20) NOT NULL,
+    estado_actual   VARCHAR2(20) NOT NULL,
+    fecha_cambio    DATE NOT NULL
+)
+LOGGING;
+
+ALTER TABLE historial_reserva_carro ADD CONSTRAINT historial_reserva_carro_pk PRIMARY KEY ( id_historial );
+
+ALTER TABLE historial_reserva_carro
+    ADD CONSTRAINT fk_hist_res_car_res FOREIGN KEY ( id_reserva )
+        REFERENCES reserva_carro ( id_reserva )
+    NOT DEFERRABLE;
+	
+INSERTS
+
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (1, 1, 'Activa', 'Completada', TO_DATE('2023-10-06', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (2, 2, 'Activa', 'Completada', TO_DATE('2023-10-07', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (3, 3, 'Activa', 'Completada', TO_DATE('2023-10-08', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (4, 4, 'Activa', 'Completada', TO_DATE('2023-10-09', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (5, 5, 'Activa', 'Completada', TO_DATE('2023-10-10', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (6, 6, 'Activa', 'Completada', TO_DATE('2023-10-11', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (7, 7, 'Activa', 'Completada', TO_DATE('2023-10-12', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (8, 8, 'Activa', 'Completada', TO_DATE('2023-10-13', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (9, 9, 'Activa', 'Completada', TO_DATE('2023-10-14', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (10, 10, 'Activa', 'Completada', TO_DATE('2023-10-15', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (11, 11, 'Activa', 'Completada', TO_DATE('2023-10-16', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (12, 12, 'Activa', 'Completada', TO_DATE('2023-10-17', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (13, 13, 'Activa', 'Completada', TO_DATE('2023-10-18', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (14, 14, 'Activa', 'Completada', TO_DATE('2023-10-19', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (15, 15, 'Activa', 'Completada', TO_DATE('2023-10-20', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (16, 16, 'Activa', 'Completada', TO_DATE('2023-10-21', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (17, 17, 'Activa', 'Completada', TO_DATE('2023-10-22', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (18, 18, 'Activa', 'Completada', TO_DATE('2023-10-23', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (19, 19, 'Activa', 'Completada', TO_DATE('2023-10-24', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (20, 20, 'Activa', 'Completada', TO_DATE('2023-10-25', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (21, 21, 'Activa', 'Completada', TO_DATE('2023-10-26', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (22, 22, 'Activa', 'Completada', TO_DATE('2023-10-27', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (23, 23, 'Activa', 'Completada', TO_DATE('2023-10-28', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (24, 24, 'Activa', 'Completada', TO_DATE('2023-10-29', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (25, 25, 'Activa', 'Completada', TO_DATE('2024-02-06', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (26, 26, 'Activa', 'Completada', TO_DATE('2024-06-06', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (27, 27, 'Activa', 'Completada', TO_DATE('2024-10-06', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (28, 28, 'Activa', 'Completada', TO_DATE('2025-02-06', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (29, 29, 'Activa', 'Completada', TO_DATE('2025-06-06', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (30, 30, 'Activa', 'Completada', TO_DATE('2025-10-06', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (31, 31, 'Activa', 'Completada', TO_DATE('2026-02-06', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (32, 32, 'Activa', 'Completada', TO_DATE('2026-06-06', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (33, 33, 'Activa', 'Completada', TO_DATE('2027-02-06', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (34, 34, 'Activa', 'Completada', TO_DATE('2027-06-06', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (35, 35, 'Activa', 'Completada', TO_DATE('2027-10-06', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (36, 36, 'Activa', 'Completada', TO_DATE('2028-02-06', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (37, 37, 'Activa', 'Completada', TO_DATE('2028-06-06', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (38, 38, 'Activa', 'Completada', TO_DATE('2028-10-06', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (39, 39, 'Activa', 'Completada', TO_DATE('2029-02-06', 'YYYY-MM-DD'));
+INSERT INTO historial_reserva_carro (id_historial, id_reserva, estado_anterior, estado_actual, fecha_cambio)
+VALUES (40, 40, 'Activa', 'Completada', TO_DATE('2029-06-06', 'YYYY-MM-DD'));

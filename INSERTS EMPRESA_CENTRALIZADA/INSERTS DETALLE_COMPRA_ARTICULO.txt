@@ -1,0 +1,109 @@
+CREATE TABLE detalle_compra_articulo (
+    id_detalle   NUMBER(10) NOT NULL,
+    id_compra    NUMBER(10) NOT NULL,
+    id_cliente   NUMBER(10) NOT NULL,
+    id_articulo  NUMBER(10) NOT NULL,
+    cantidad     NUMBER(5) NOT NULL,
+    precio_total NUMBER(10, 2) NOT NULL
+)
+LOGGING;
+
+ALTER TABLE detalle_compra_articulo ADD CONSTRAINT detalle_compra_articulo_pk PRIMARY KEY ( id_detalle );
+
+ALTER TABLE detalle_compra_articulo
+    ADD CONSTRAINT fk_det_com_art_art FOREIGN KEY ( id_articulo )
+        REFERENCES articulo ( id_articulo )
+    NOT DEFERRABLE;
+
+ALTER TABLE detalle_compra_articulo
+    ADD CONSTRAINT fk_det_com_art_cli FOREIGN KEY ( id_cliente )
+        REFERENCES cliente ( id_cliente )
+    NOT DEFERRABLE;
+	
+ALTER TABLE detalle_compra_articulo
+    ADD CONSTRAINT fk_det_com_art_com FOREIGN KEY ( id_compra )
+        REFERENCES compra_articulo ( id_compra )
+    NOT DEFERRABLE;
+	
+INSERTS
+
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (1, 1, 1, 1, 5, 100.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (2, 2, 2, 2, 3, 60.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (3, 3, 3, 3, 2, 40.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (4, 4, 4, 4, 4, 80.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (5, 5, 5, 5, 1, 20.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (6, 6, 6, 6, 5, 100.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (7, 7, 7, 7, 3, 60.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (8, 8, 8, 8, 2, 40.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (9, 9, 9, 9, 4, 80.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (10, 10, 10, 10, 1, 20.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (11, 11, 11, 11, 5, 100.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (12, 12, 12, 12, 3, 60.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (13, 13, 13, 13, 2, 40.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (14, 14, 14, 14, 4, 80.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (15, 15, 15, 15, 1, 20.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (16, 16, 16, 16, 5, 100.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (17, 17, 17, 17, 3, 60.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (18, 18, 18, 18, 2, 40.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (19, 19, 19, 19, 4, 80.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (20, 20, 20, 20, 1, 20.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (21, 21, 21, 21, 5, 100.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (22, 22, 22, 22, 3, 60.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (23, 23, 23, 23, 2, 40.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (24, 24, 24, 24, 4, 80.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (25, 25, 25, 25, 1, 20.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (26, 26, 1, 1, 5, 100.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (27, 27, 2, 2, 3, 60.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (28, 28, 3, 3, 2, 40.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (29, 29, 4, 4, 4, 80.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (30, 30, 5, 5, 1, 20.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (31, 31, 6, 6, 5, 100.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (32, 32, 7, 7, 3, 60.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (33, 33, 8, 8, 2, 40.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (34, 34, 9, 9, 4, 80.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (35, 35, 10, 10, 1, 20.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (36, 36, 11, 11, 5, 100.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (37, 37, 12, 12, 3, 60.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (38, 38, 13, 13, 2, 40.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (39, 39, 14, 14, 4, 80.00);
+INSERT INTO detalle_compra_articulo (id_detalle, id_compra, id_cliente, id_articulo, cantidad, precio_total)
+VALUES (40, 40, 15, 15, 1, 20.00);

@@ -1,0 +1,61 @@
+CREATE TABLE hotel (
+    id_hotel              NUMBER(10) NOT NULL,
+    nombre                VARCHAR2(50) NOT NULL,
+    ubicacion             VARCHAR2(100) NOT NULL,
+    categoria             VARCHAR2(20),
+    instalaciones         VARCHAR2(100),
+    politicas_cancelacion VARCHAR2(100),
+    id_ciudad             NUMBER(10) NOT NULL
+)
+LOGGING;
+
+ALTER TABLE hotel ADD CONSTRAINT hotel_pk PRIMARY KEY ( id_hotel );
+
+ALTER TABLE hotel
+    ADD CONSTRAINT fk_hotel_ciudad FOREIGN KEY ( id_ciudad )
+        REFERENCES ciudad ( id_ciudad )
+    NOT DEFERRABLE;
+	
+INSERTS
+
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (1, 'Hotel Bogotá Centro', 'Calle 10 #123', 'Económico', 'Wi-Fi, Desayuno incluido', 'Cancelación gratuita hasta 24 horas antes', 1);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (2, 'Gran Hotel Medellín', 'Av. Poblado #456', 'Lujo', 'Piscina, Spa', 'Cancelación gratuita hasta 48 horas antes', 2);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (3, 'Cali Suites Hotel', 'Carrera 5 #789', 'Económico', 'Wi-Fi, Estacionamiento gratuito', 'Cancelación gratuita hasta 12 horas antes', 3);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (4, 'Barranquilla Beach Resort', 'Playa de Bocagrande', 'Lujo', 'Playa privada, Spa', 'Cancelación gratuita hasta 72 horas antes', 4);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (5, 'Cartagena Paradise Hotel', 'Centro Histórico', 'Lujo', 'Piscina, Restaurante', 'Cancelación gratuita hasta 48 horas antes', 5);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (6, 'Soledad Comfort Inn', 'Carrera 7 #234', 'Económico', 'Wi-Fi, Desayuno incluido', 'Cancelación gratuita hasta 24 horas antes', 6);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (7, 'Cúcuta City Hotel', 'Av. Libertadores #567', 'Económico', 'Wi-Fi, Estacionamiento gratuito', 'Cancelación gratuita hasta 12 horas antes', 7);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (8, 'Ibagué Plaza Hotel', 'Carrera 10 #789', 'Económico', 'Wi-Fi, Piscina', 'Cancelación gratuita hasta 24 horas antes', 8);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (9, 'Soacha Green Hotel', 'Calle 2 #345', 'Económico', 'Wi-Fi, Estacionamiento gratuito', 'Cancelación gratuita hasta 24 horas antes', 9);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (10, 'Villavicencio Retreat', 'Av. Los Libertadores', 'Económico', 'Wi-Fi, Desayuno incluido', 'Cancelación gratuita hasta 24 horas antes', 10);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (11, 'Bucaramanga Inn', 'Calle 20 #456', 'Económico', 'Wi-Fi, Desayuno incluido', 'Cancelación gratuita hasta 24 horas antes', 11);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (12, 'Santa Marta Beachfront Resort', 'Playa de Rodadero', 'Lujo', 'Playa privada, Spa', 'Cancelación gratuita hasta 72 horas antes', 12);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (13, 'Valledupar Comfort Suites', 'Carrera 9 #567', 'Económico', 'Wi-Fi, Estacionamiento gratuito', 'Cancelación gratuita hasta 12 horas antes', 13);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (14, 'Bello City Hotel', 'Calle 15 #234', 'Económico', 'Wi-Fi, Desayuno incluido', 'Cancelación gratuita hasta 24 horas antes', 14);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (15, 'Pereira Grand Hotel', 'Carrera 7 #789', 'Lujo', 'Piscina, Restaurante', 'Cancelación gratuita hasta 48 horas antes', 15);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (16, 'Montería Beach Hotel', 'Playa de Buenavista', 'Lujo', 'Playa privada, Spa', 'Cancelación gratuita hasta 72 horas antes', 16);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (17, 'Pasto Mountain Retreat', 'Montañas de Nariño', 'Económico', 'Wi-Fi, Desayuno incluido', 'Cancelación gratuita hasta 24 horas antes', 17);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (18, 'Buenaventura Resort Y Spa', 'Playa de Juanchaco', 'Lujo', 'Playa privada, Spa', 'Cancelación gratuita hasta 72 horas antes', 18);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (19, 'Manizales Heights Hotel', 'Calle 22 #567', 'Económico', 'Wi-Fi, Estacionamiento gratuito', 'Cancelación gratuita hasta 12 horas antes', 19);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (20, 'Neiva Grand Plaza', 'Carrera 8 #234', 'Lujo', 'Piscina, Restaurante', 'Cancelación gratuita hasta 48 horas antes', 20);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (21, 'Palmira Comfort Hotel', 'Carrera 6 #789', 'Económico', 'Wi-Fi, Estacionamiento gratuito', 'Cancelación gratuita hasta 24 horas antes', 21);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (22, 'Riohacha Paradise Resort', 'Playa de Los Camarones', 'Lujo', 'Playa privada, Spa', 'Cancelación gratuita hasta 48 horas antes', 22);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (23, 'Sincelejo Plaza Inn', 'Calle 14 #567', 'Económico', 'Wi-Fi, Desayuno incluido', 'Cancelación gratuita hasta 24 horas antes', 23);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (24, 'Armenia Hillside Hotel', 'Carrera 12 #234', 'Económico', 'Wi-Fi, Estacionamiento gratuito', 'Cancelación gratuita hasta 24 horas antes', 24);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (25, 'Popayán Historic Inn', 'Calle 7 #789', 'Económico', 'Wi-Fi, Desayuno incluido', 'Cancelación gratuita hasta 12 horas antes', 25);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (26, 'Yopal Green Oasis', 'Av. Los Progresos', 'Económico', 'Wi-Fi, Estacionamiento gratuito', 'Cancelación gratuita hasta 24 horas antes', 26);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (27, 'Florencia Riverside Hotel', 'Calle 20 #567', 'Lujo', 'Piscina, Restaurante', 'Cancelación gratuita hasta 48 horas antes', 27);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (28, 'Tunja Comfort Suites', 'Carrera 5 #234', 'Económico', 'Wi-Fi, Estacionamiento gratuito', 'Cancelación gratuita hasta 24 horas antes', 28);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (29, 'Girardot Paradise Resort', 'Playa de Girardot', 'Lujo', 'Playa privada, Spa', 'Cancelación gratuita hasta 72 horas antes', 29);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (30, 'Quibdó Riverfront Hotel', 'Calle 15 #567', 'Económico', 'Wi-Fi, Desayuno incluido', 'Cancelación gratuita hasta 24 horas antes', 30);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (31, 'Duitama Mountain Retreat', 'Montañas de Boyacá', 'Económico', 'Wi-Fi, Estacionamiento gratuito', 'Cancelación gratuita hasta 12 horas antes', 31);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (32, 'Envigado Luxury Suites', 'Carrera 10 #234', 'Lujo', 'Piscina, Spa', 'Cancelación gratuita hasta 48 horas antes', 32);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (33, 'Tumaco Beachfront Resort', 'Playa de Bocagrande', 'Lujo', 'Playa privada, Spa', 'Cancelación gratuita hasta 72 horas antes', 33);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (34, 'Dosquebradas Comfort Inn', 'Carrera 7 #567', 'Económico', 'Wi-Fi, Desayuno incluido', 'Cancelación gratuita hasta 24 horas antes', 34);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (35, 'Turbo Beach Hotel', 'Playa de Turbo', 'Lujo', 'Playa privada, Spa', 'Cancelación gratuita hasta 48 horas antes', 35);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (36, 'Sogamoso City Hotel', 'Calle 20 #234', 'Económico', 'Wi-Fi, Estacionamiento gratuito', 'Cancelación gratuita hasta 12 horas antes', 36);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (37, 'Maicao Plaza Inn', 'Carrera 5 #789', 'Económico', 'Wi-Fi, Estacionamiento gratuito', 'Cancelación gratuita hasta 24 horas antes', 37);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (38, 'Zipaquirá Suites', 'Calle 15 #567', 'Económico', 'Wi-Fi, Desayuno incluido', 'Cancelación gratuita hasta 24 horas antes', 38);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (39, 'Pitalito Green Oasis', 'Carrera 9 #234', 'Económico', 'Wi-Fi, Estacionamiento gratuito', 'Cancelación gratuita hasta 12 horas antes', 39);
+INSERT INTO hotel (id_hotel, nombre, ubicacion, categoria, instalaciones, politicas_cancelacion, id_ciudad) VALUES (40, 'Leticia Jungle Lodge', 'Selva del Amazonas', 'Lujo', 'Excursiones en la selva, Comidas incluidas', 'Cancelación gratuita hasta 72 horas antes', 40);
+

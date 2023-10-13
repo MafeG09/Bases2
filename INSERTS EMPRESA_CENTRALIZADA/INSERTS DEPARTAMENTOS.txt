@@ -1,0 +1,74 @@
+CREATE TABLE departamento (
+    id_departamento NUMBER(10) NOT NULL,
+    nombre          VARCHAR2(50) NOT NULL,
+    poblacion       NUMBER(10) NOT NULL
+)
+LOGGING;
+
+ALTER TABLE departamento ADD CONSTRAINT departamento_pk PRIMARY KEY ( id_departamento );
+
+-- Inserting data row by row for all 32 records
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(1, 'Amazonas', 82068);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(2, 'Antioquia', 6887306);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(3, 'Arauca', 280109);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(4, 'Atlántico', 2722121);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(5, 'Bolívar', 2180302);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(6, 'Boyacá', 1278665);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(7, 'Caldas', 1004949);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(8, 'Caquetá', 496243);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(9, 'Casanare', 433168);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(10, 'Cauca', 1492718);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(11, 'Cesar', 1098574);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(12, 'Chocó', 539933);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(13, 'Córdoba', 1788390);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(14, 'Cundinamarca', 2658088);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(15, 'Guainía', 48361);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(16, 'Guaviare', 133857);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(17, 'Huila', 1219063);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(18, 'La Guajira', 927506);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(19, 'Magdalena', 1374843);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(20, 'Meta', 1078586);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(21, 'Nariño', 1761459);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(22, 'Norte de Santander', 1442872);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(23, 'Putumayo', 359698);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(24, 'Quindío', 578075);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(25, 'Risaralda', 977856);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(26, 'San Andrés y Providencia', 79573);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(27, 'Santander', 2112267);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(28, 'Sucre', 928984);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(29, 'Tolima', 1404653);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(30, 'Valle del Cauca', 4900759);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(31, 'Vaupés', 44865);
+INSERT INTO departamento (id_departamento, nombre, poblacion) VALUES
+(32, 'Vichada', 110599);

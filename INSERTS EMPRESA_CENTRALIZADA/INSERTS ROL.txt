@@ -1,0 +1,52 @@
+CREATE TABLE rol (
+    id_rol      NUMBER(10) NOT NULL,
+    nombre      VARCHAR2(50) NOT NULL,
+    descripcion VARCHAR2(100),
+    salario     NUMBER(10, 2) NOT NULL
+)
+LOGGING;
+
+ALTER TABLE rol ADD CONSTRAINT rol_pk PRIMARY KEY ( id_rol );
+
+INSERTS
+
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (1, 'Gerente', 'Responsable de la gestión general', 60000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (2, 'Analista de Datos', 'Analiza y interpreta datos', 45000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (3, 'Desarrollador Web', 'Crea aplicaciones web', 55000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (4, 'Diseñador Gráfico', 'Crea diseños visuales', 48000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (5, 'Contador', 'Maneja la contabilidad', 52000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (6, 'Ingeniero de Software', 'Desarrolla software', 60000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (7, 'Recursos Humanos', 'Gestiona el personal', 55000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (8, 'Especialista en Marketing', 'Maneja estrategias de marketing', 58000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (9, 'Soporte Técnico', 'Brinda asistencia técnica', 45000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (10, 'Abogado', 'Ofrece asesoría legal', 55000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (11, 'Ingeniero de Redes', 'Administra redes informáticas', 58000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (12, 'Gestor de Proyectos', 'Lidera proyectos', 65000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (13, 'Enfermera', 'Brinda cuidados médicos', 52000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (14, 'Chef', 'Prepara platos gourmet', 50000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (15, 'Traductor', 'Traduce documentos', 48000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (16, 'Profesor', 'Da clases en colegios', 55000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (17, 'Médico', 'Atiende pacientes', 70000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (18, 'Arquitecto', 'Diseña edificios', 60000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (19, 'Psicólogo', 'Ofrece terapia', 55000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (20, 'Recepcionista', 'Atiende a los visitantes', 45000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (21, 'Consultor de Negocios', 'Ofrece consultoría empresarial', 62000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (22, 'Economista', 'Analiza indicadores económicos', 58000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (23, 'Fotógrafo', 'Captura imágenes', 48000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (24, 'Ingeniero Civil', 'Diseña proyectos de construcción', 65000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (25, 'Community Manager', 'Administra redes sociales', 50000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (26, 'Analista de Seguridad', 'Evalúa la seguridad informática', 58000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (27, 'Electricista', 'Realiza instalaciones eléctricas', 52000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (28, 'Programador de Videojuegos', 'Desarrolla juegos', 60000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (29, 'Editor de Video', 'Edita material de video', 48000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (30, 'Diseñador de Moda', 'Crea diseños de moda', 55000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (31, 'Nutricionista', 'Ofrece asesoría nutricional', 50000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (32, 'Periodista', 'Escribe noticias y reportajes', 52000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (33, 'Ingeniero Mecánico', 'Diseña maquinaria', 62000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (34, 'Agente de Viajes', 'Organiza viajes y turismo', 48000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (35, 'Geólogo', 'Estudia la tierra y minerales', 58000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (36, 'Dentista', 'Brinda atención dental', 65000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (37, 'Entrenador Personal', 'Ofrece entrenamiento físico', 55000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (38, 'Artista Visual', 'Crea obras de arte', 50000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (39, 'Ingeniero Eléctrico', 'Diseña sistemas eléctricos', 62000.00);
+INSERT INTO rol (id_rol, nombre, descripcion, salario) VALUES (40, 'Terapeuta Ocupacional', 'Ayuda a pacientes con terapia', 58000.00);

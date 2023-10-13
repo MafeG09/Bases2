@@ -1,0 +1,29 @@
+Las siguientes 4 tablas difieren entre el esquema empresa/centralizada y el esquema cliente, por lo cual usar los inserts de las carpetas respectivas:
+Reserva_carro
+Reserva_hotel
+Compra_articulo
+Compra_paquete
+
+ORDEN PARA EJECUTAR LOS INSERTS
+Departamento
+Rol
+Ciudad
+Hotel
+Carro
+Paquete
+Artículo
+Empleado
+Cliente
+Habitación
+Reserva_carro (MIRAR RESPECTIVA CARPERTA)
+Reserva_hotel (MIRAR RESPECTIVA CARPERTA)
+Compra_articulo (MIRAR RESPECTIVA CARPERTA)
+Compra_paquete (MIRAR RESPECTIVA CARPERTA)
+Detalle_reserva_carro
+Detalle_reserva_hotel
+Detalle_compra_articulo
+Detalle_compra_paquete
+Historial_reserva_carro
+Historial_reserva_hotel
+Historial_compra_articulo
+Historial_compra_paquete

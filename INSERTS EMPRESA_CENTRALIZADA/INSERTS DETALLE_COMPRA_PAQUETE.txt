@@ -1,0 +1,110 @@
+CREATE TABLE detalle_compra_paquete (
+    id_detalle      NUMBER(10) NOT NULL,
+    id_compra       NUMBER(10) NOT NULL,
+    id_cliente      NUMBER(10) NOT NULL,
+    id_paquete      NUMBER(10) NOT NULL,
+    fecha_compra    DATE NOT NULL,
+    numero_personas NUMBER(5) NOT NULL,
+    precio_total    NUMBER(10, 2) NOT NULL
+)
+LOGGING;
+
+ALTER TABLE detalle_compra_paquete ADD CONSTRAINT detalle_compra_paquete_pk PRIMARY KEY ( id_detalle );
+
+ALTER TABLE detalle_compra_paquete
+    ADD CONSTRAINT fk_det_com_paq_cli FOREIGN KEY ( id_cliente )
+        REFERENCES cliente ( id_cliente )
+    NOT DEFERRABLE;
+
+ALTER TABLE detalle_compra_paquete
+    ADD CONSTRAINT fk_det_com_paq_com FOREIGN KEY ( id_compra )
+        REFERENCES compra_paquete ( id_compra )
+    NOT DEFERRABLE;
+
+ALTER TABLE detalle_compra_paquete
+    ADD CONSTRAINT fk_det_com_paq_paq FOREIGN KEY ( id_paquete )
+        REFERENCES paquete ( id_paquete )
+    NOT DEFERRABLE;
+	
+INSERTS
+
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (1, 1, 1, 1, TO_DATE('2023-07-10', 'YYYY-MM-DD'), 2, 1800.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (2, 2, 2, 2, TO_DATE('2023-08-18', 'YYYY-MM-DD'), 3, 2400.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (3, 3, 3, 3, TO_DATE('2023-09-26', 'YYYY-MM-DD'), 4, 3200.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (4, 4, 4, 4, TO_DATE('2023-10-04', 'YYYY-MM-DD'), 3, 2400.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (5, 5, 5, 5, TO_DATE('2023-11-12', 'YYYY-MM-DD'), 2, 1600.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (6, 6, 6, 6, TO_DATE('2023-12-20', 'YYYY-MM-DD'), 4, 3200.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (7, 7, 7, 7, TO_DATE('2024-01-27', 'YYYY-MM-DD'), 3, 2400.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (8, 8, 8, 8, TO_DATE('2024-03-06', 'YYYY-MM-DD'), 2, 1600.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (9, 9, 9, 9, TO_DATE('2024-04-14', 'YYYY-MM-DD'), 4, 3200.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (10, 10, 10, 10, TO_DATE('2024-05-22', 'YYYY-MM-DD'), 3, 2400.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (11, 11, 11, 11, TO_DATE('2024-06-29', 'YYYY-MM-DD'), 2, 1600.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (12, 12, 12, 12, TO_DATE('2024-08-07', 'YYYY-MM-DD'), 4, 3200.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (13, 13, 13, 13, TO_DATE('2024-09-14', 'YYYY-MM-DD'), 3, 2400.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (14, 14, 14, 14, TO_DATE('2024-10-22', 'YYYY-MM-DD'), 2, 1600.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (15, 15, 15, 15, TO_DATE('2024-11-29', 'YYYY-MM-DD'), 4, 3200.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (16, 16, 16, 16, TO_DATE('2025-01-06', 'YYYY-MM-DD'), 3, 2400.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (17, 17, 17, 17, TO_DATE('2025-02-13', 'YYYY-MM-DD'), 2, 1600.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (18, 18, 18, 18, TO_DATE('2025-03-23', 'YYYY-MM-DD'), 4, 3200.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (19, 19, 19, 19, TO_DATE('2025-04-30', 'YYYY-MM-DD'), 3, 2400.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (20, 20, 20, 20, TO_DATE('2025-06-07', 'YYYY-MM-DD'), 2, 1600.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (21, 21, 21, 21, TO_DATE('2025-07-15', 'YYYY-MM-DD'), 4, 3200.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (22, 22, 22, 22, TO_DATE('2025-08-23', 'YYYY-MM-DD'), 3, 2400.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (23, 23, 23, 23, TO_DATE('2025-09-30', 'YYYY-MM-DD'), 2, 1600.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (24, 24, 24, 24, TO_DATE('2025-11-07', 'YYYY-MM-DD'), 4, 3200.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (25, 25, 1, 1, TO_DATE('2025-12-14', 'YYYY-MM-DD'), 2, 1800.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (26, 26, 2, 2, TO_DATE('2026-01-22', 'YYYY-MM-DD'), 3, 2400.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (27, 27, 3, 3, TO_DATE('2026-02-28', 'YYYY-MM-DD'), 4, 3200.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (28, 28, 4, 4, TO_DATE('2026-04-07', 'YYYY-MM-DD'), 3, 2400.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (29, 29, 5, 5, TO_DATE('2026-05-15', 'YYYY-MM-DD'), 2, 1600.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (30, 30, 6, 6, TO_DATE('2026-06-22', 'YYYY-MM-DD'), 4, 3200.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (31, 31, 7, 7, TO_DATE('2026-07-30', 'YYYY-MM-DD'), 3, 2400.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (32, 32, 8, 8, TO_DATE('2026-09-06', 'YYYY-MM-DD'), 2, 1600.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (33, 33, 9, 9, TO_DATE('2026-10-14', 'YYYY-MM-DD'), 4, 3200.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (34, 34, 10, 10, TO_DATE('2026-11-21', 'YYYY-MM-DD'), 3, 2400.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (35, 35, 11, 11, TO_DATE('2027-01-28', 'YYYY-MM-DD'), 2, 1600.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (36, 36, 12, 12, TO_DATE('2027-03-08', 'YYYY-MM-DD'), 4, 3200.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (37, 37, 13, 13, TO_DATE('2027-04-15', 'YYYY-MM-DD'), 3, 2400.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (38, 38, 14, 14, TO_DATE('2027-05-23', 'YYYY-MM-DD'), 2, 1600.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (39, 39, 15, 15, TO_DATE('2027-06-30', 'YYYY-MM-DD'), 4, 3200.00);
+INSERT INTO detalle_compra_paquete (id_detalle, id_compra, id_cliente, id_paquete, fecha_compra, numero_personas, precio_total)
+VALUES (40, 40, 16, 16, TO_DATE('2027-08-07', 'YYYY-MM-DD'), 3, 2400.00);

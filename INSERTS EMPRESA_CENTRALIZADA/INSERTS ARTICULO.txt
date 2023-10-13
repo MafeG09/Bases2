@@ -1,0 +1,69 @@
+CREATE TABLE articulo (
+    id_articulo     NUMBER(10) NOT NULL,
+    nombre          VARCHAR2(50),
+    descripcion     VARCHAR2(100),
+    tipo            VARCHAR2(20),
+    precio_unitario NUMBER(10, 2),
+    id_hotel        NUMBER(10) NOT NULL
+)
+LOGGING;
+
+ALTER TABLE articulo ADD CONSTRAINT articulo_pk PRIMARY KEY ( id_articulo );
+
+ALTER TABLE articulo
+    ADD CONSTRAINT fk_articulo_hotel FOREIGN KEY ( id_hotel )
+        REFERENCES hotel ( id_hotel )
+    NOT DEFERRABLE;
+	
+INSERTS
+
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (1, 'Toallas de Playa', 'Toallas de playa de alta calidad', 'Toallas', 60000.00, 2);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (2, 'Gafas de Sol', 'Gafas de sol de diseño', 'Accesorios', 120000.00, 4);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (3, 'Kit de Playa', 'Kit que incluye sillas, sombrilla y juguetes de playa', 'Kits de Playa', 250000.00, 5);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (4, 'Excursión en la Montaña', 'Excursión guiada en las montañas', 'Excursiones', 150000.00, 6);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (5, 'Souvenirs Locales', 'Souvenirs hechos a mano', 'Souvenirs', 35000.00, 9);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (6, 'Arte Local', 'Obras de arte de artistas locales', 'Arte', 800000.00, 10);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (7, 'Ropa de Playa', 'Ropa de playa para hombres y mujeres', 'Ropa', 100000.00, 11);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (8, 'Productos de Spa', 'Productos de cuidado de la piel y bienestar', 'Spa', 75000.00, 12);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (9, 'Artesanías Locales', 'Artesanías autóctonas hechas a mano', 'Artesanías', 45000.00, 14);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (10, 'Comida Local', 'Platos locales y gastronomía autóctona', 'Comida', 55000.00, 15);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (11, 'Recuerdos de Viaje', 'Recuerdos para llevar a casa', 'Recuerdos', 25000.00, 16);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (12, 'Joyas Artesanales', 'Joyas hechas a mano por artesanos locales', 'Joyas', 95000.00, 18);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (13, 'Vinos y Licores', 'Selección de vinos y licores', 'Bebidas', 70000.00, 19);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (14, 'Ropa de Aventura', 'Ropa adecuada para actividades al aire libre', 'Ropa', 120000.00, 20);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (15, 'Arte de la Selva', 'Obras de arte inspiradas en la selva amazónica', 'Arte', 850000.00, 22);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (16, 'Ropa de Playa', 'Ropa de playa para hombres y mujeres', 'Ropa', 95000.00, 24);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (17, 'Productos de Spa', 'Productos de cuidado de la piel y bienestar', 'Spa', 70000.00, 25);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (18, 'Joyas Artesanales', 'Joyas hechas a mano por artesanos locales', 'Joyas', 105000.00, 27);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (19, 'Ropa de Aventura', 'Ropa adecuada para actividades al aire libre', 'Ropa', 115000.00, 28);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (20, 'Vinos y Licores', 'Selección de vinos y licores', 'Bebidas', 75000.00, 31);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (21, 'Arte de la Selva', 'Obras de arte inspiradas en la selva amazónica', 'Arte', 880000.00, 37);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (22, 'Productos de Spa', 'Productos de cuidado de la piel y bienestar', 'Spa', 72000.00, 37);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (23, 'Comida Local', 'Platos locales y gastronomía autóctona', 'Comida', 60000.00, 40);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (24, 'Recuerdos de Viaje', 'Recuerdos para llevar a casa', 'Recuerdos', 28000.00, 40);
+INSERT INTO articulo (id_articulo, nombre, descripcion, tipo, precio_unitario, id_hotel)
+VALUES (25, 'Ropa de Playa', 'Ropa de playa para hombres y mujeres', 'Ropa', 105000.00, 40);

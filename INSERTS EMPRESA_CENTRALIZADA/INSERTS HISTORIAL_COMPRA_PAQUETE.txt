@@ -1,0 +1,98 @@
+CREATE TABLE historial_compra_paquete (
+    id_historial    NUMBER(10) NOT NULL,
+    id_compra       NUMBER(10) NOT NULL,
+    estado_anterior VARCHAR2(20) NOT NULL,
+    estado_actual   VARCHAR2(20) NOT NULL,
+    fecha_cambio    DATE NOT NULL
+)
+LOGGING;
+
+ALTER TABLE historial_compra_paquete ADD CONSTRAINT historial_compra_paquete_pk PRIMARY KEY ( id_historial );
+
+ALTER TABLE historial_compra_paquete
+    ADD CONSTRAINT fk_hist_com_paq_com FOREIGN KEY ( id_compra )
+        REFERENCES compra_paquete ( id_compra )
+    NOT DEFERRABLE;
+	
+INSERTS
+
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (1, 1, 'En Proceso', 'Completado', TO_DATE('2024-01-15', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (2, 2, 'En Proceso', 'Completado', TO_DATE('2024-02-25', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (3, 3, 'En Proceso', 'Completado', TO_DATE('2024-03-10', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (4, 4, 'En Proceso', 'Completado', TO_DATE('2024-04-18', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (5, 5, 'En Proceso', 'Completado', TO_DATE('2024-05-26', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (6, 6, 'En Proceso', 'Completado', TO_DATE('2024-06-03', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (7, 7, 'En Proceso', 'Completado', TO_DATE('2024-07-11', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (8, 8, 'En Proceso', 'Completado', TO_DATE('2024-08-19', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (9, 9, 'En Proceso', 'Completado', TO_DATE('2024-09-27', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (10, 10, 'En Proceso', 'Completado', TO_DATE('2024-10-05', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (11, 11, 'En Proceso', 'Completado', TO_DATE('2024-11-13', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (12, 12, 'En Proceso', 'Completado', TO_DATE('2024-12-21', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (13, 13, 'En Proceso', 'Completado', TO_DATE('2025-01-28', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (14, 14, 'En Proceso', 'Completado', TO_DATE('2025-02-05', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (15, 15, 'En Proceso', 'Completado', TO_DATE('2025-03-15', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (16, 16, 'En Proceso', 'Completado', TO_DATE('2025-04-23', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (17, 17, 'En Proceso', 'Completado', TO_DATE('2025-05-01', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (18, 18, 'En Proceso', 'Completado', TO_DATE('2025-06-08', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (19, 19, 'En Proceso', 'Completado', TO_DATE('2025-07-16', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (20, 20, 'En Proceso', 'Completado', TO_DATE('2025-08-24', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (21, 21, 'En Proceso', 'Completado', TO_DATE('2025-09-01', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (22, 22, 'En Proceso', 'Completado', TO_DATE('2025-10-09', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (23, 23, 'En Proceso', 'Completado', TO_DATE('2025-11-17', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (24, 24, 'En Proceso', 'Completado', TO_DATE('2025-12-25', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (25, 25, 'En Proceso', 'Completado', TO_DATE('2026-01-03', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (26, 26, 'En Proceso', 'Completado', TO_DATE('2026-02-10', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (27, 27, 'En Proceso', 'Completado', TO_DATE('2026-03-20', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (28, 28, 'En Proceso', 'Completado', TO_DATE('2026-04-28', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (29, 29, 'En Proceso', 'Completado', TO_DATE('2026-05-06', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (30, 30, 'En Proceso', 'Completado', TO_DATE('2026-06-14', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (31, 31, 'En Proceso', 'Completado', TO_DATE('2026-07-22', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (32, 32, 'En Proceso', 'Completado', TO_DATE('2026-08-30', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (33, 33, 'En Proceso', 'Completado', TO_DATE('2026-09-07', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (34, 34, 'En Proceso', 'Completado', TO_DATE('2026-10-15', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (35, 35, 'En Proceso', 'Completado', TO_DATE('2026-11-23', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (36, 36, 'En Proceso', 'Completado', TO_DATE('2026-12-31', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (37, 37, 'En Proceso', 'Completado', TO_DATE('2027-01-08', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (38, 38, 'En Proceso', 'Completado', TO_DATE('2027-02-16', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (39, 39, 'En Proceso', 'Completado', TO_DATE('2027-03-26', 'YYYY-MM-DD'));
+INSERT INTO historial_compra_paquete (id_historial, id_compra, estado_anterior, estado_actual, fecha_cambio)
+VALUES (40, 40, 'En Proceso', 'Completado', TO_DATE('2027-04-03', 'YYYY-MM-DD'));

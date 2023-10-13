@@ -1,0 +1,105 @@
+CREATE TABLE compra_articulo (
+    id_compra       NUMBER(10) NOT NULL,
+    id_cliente      NUMBER(10) NOT NULL,
+    cantidad        NUMBER(5) NOT NULL,
+    precio_unitario NUMBER(10, 2) NOT NULL,
+    precio_total    NUMBER(10, 2) NOT NULL,
+    estado          VARCHAR2(20) NOT NULL,
+    id_empleado     NUMBER(10) NOT NULL
+)
+LOGGING;
+
+ALTER TABLE compra_articulo ADD CONSTRAINT compra_articulo_pk PRIMARY KEY ( id_compra );
+
+ALTER TABLE compra_articulo
+    ADD CONSTRAINT fk_compra_articulo_cliente FOREIGN KEY ( id_cliente )
+        REFERENCES cliente ( id_cliente )
+    NOT DEFERRABLE;
+
+ALTER TABLE compra_articulo
+    ADD CONSTRAINT fk_compra_articulo_empleado FOREIGN KEY ( id_empleado )
+        REFERENCES empleado ( id_empleado )
+    NOT DEFERRABLE;
+	
+INSERTS
+
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (1, 1, 3, 25.99, 77.97, 'Entregado', 1);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (2, 2, 2, 39.99, 79.98, 'Entregado', 2);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (3, 3, 5, 14.99, 74.95, 'En Proceso', 3);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (4, 4, 1, 199.99, 199.99, 'Entregado', 4);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (5, 5, 4, 49.99, 199.96, 'Entregado', 5);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (6, 6, 3, 79.99, 239.97, 'En Proceso', 6);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (7, 7, 2, 99.99, 199.98, 'Entregado', 7);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (8, 8, 1, 149.99, 149.99, 'Entregado', 8);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (9, 9, 3, 25.99, 77.97, 'En Proceso', 9);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (10, 10, 4, 49.99, 199.96, 'Entregado', 10);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (11, 11, 2, 69.99, 139.98, 'Entregado', 11);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (12, 12, 1, 119.99, 119.99, 'Entregado', 12);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (13, 13, 5, 14.99, 74.95, 'En Proceso', 13);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (14, 14, 4, 29.99, 119.96, 'Entregado', 14);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (15, 15, 3, 39.99, 119.97, 'En Proceso', 15);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (16, 16, 2, 69.99, 139.98, 'Entregado', 16);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (17, 17, 1, 249.99, 249.99, 'Entregado', 17);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (18, 18, 3, 25.99, 77.97, 'Entregado', 18);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (19, 19, 2, 79.99, 159.98, 'Entregado', 19);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (20, 20, 1, 199.99, 199.99, 'Entregado', 20);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (21, 21, 3, 25.99, 77.97, 'Entregado', 21);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (22, 22, 4, 49.99, 199.96, 'Entregado', 22);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (23, 23, 2, 99.99, 199.98, 'Entregado', 23);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (24, 24, 1, 129.99, 129.99, 'Entregado', 24);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (25, 1, 3, 25.99, 77.97, 'En Proceso', 1);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (26, 2, 2, 39.99, 79.98, 'En Proceso', 2);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (27, 3, 5, 14.99, 74.95, 'Entregado', 3);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (28, 4, 1, 199.99, 199.99, 'Entregado', 4);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (29, 5, 4, 49.99, 199.96, 'Entregado', 5);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (30, 6, 3, 79.99, 239.97, 'En Proceso', 6);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (31, 7, 2, 99.99, 199.98, 'Entregado', 7);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (32, 8, 1, 149.99, 149.99, 'Entregado', 8);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (33, 9, 3, 25.99, 77.97, 'En Proceso', 9);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (34, 10, 4, 49.99, 199.96, 'Entregado', 10);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (35, 11, 2, 69.99, 139.98, 'Entregado', 11);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (36, 12, 1, 119.99, 119.99, 'Entregado', 12);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (37, 13, 5, 14.99, 74.95, 'En Proceso', 13);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (38, 14, 4, 29.99, 119.96, 'Entregado', 14);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (39, 15, 3, 39.99, 119.97, 'En Proceso', 15);
+INSERT INTO compra_articulo (id_compra, id_cliente, cantidad, precio_unitario, precio_total, estado, id_empleado)
+VALUES (40, 16, 2, 69.99, 139.98, 'Entregado', 16);

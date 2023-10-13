@@ -1,0 +1,57 @@
+CREATE TABLE ciudad (
+    id_ciudad       NUMBER(10) NOT NULL,
+    nombre          VARCHAR2(50) NOT NULL,
+    poblacion       NUMBER(10) NOT NULL,
+    id_departamento NUMBER(10) NOT NULL
+)
+LOGGING;
+
+ALTER TABLE ciudad ADD CONSTRAINT ciudad_pk PRIMARY KEY ( id_ciudad );
+
+ALTER TABLE ciudad
+    ADD CONSTRAINT fk_ciudad_departamento FOREIGN KEY ( id_departamento )
+        REFERENCES departamento ( id_departamento )
+    NOT DEFERRABLE;
+
+INSERTS
+
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (1, 'Bogotá', 8380801, 14);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (2, 'Medellín', 2569007, 2);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (3, 'Cali', 2496346, 30);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (4, 'Barranquilla', 1239804, 4);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (5, 'Cartagena', 1057767, 5);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (6, 'Soledad', 700970, 4);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (7, 'Cúcuta', 680765, 22);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (8, 'Ibagué', 579803, 29);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (9, 'Soacha', 567546, 14);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (10, 'Villavicencio', 538527, 20);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (11, 'Bucaramanga', 528572, 27);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (12, 'Santa Marta', 524031, 19);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (13, 'Valledupar', 503444, 11);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (14, 'Bello', 500098, 2);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (15, 'Pereira', 481129, 25);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (16, 'Montería', 471867, 13);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (17, 'Pasto', 465148, 21);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (18, 'Buenaventura', 440995, 30);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (19, 'Manizales', 402646, 7);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (20, 'Neiva', 350457, 17);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (21, 'Palmira', 314418, 30);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (22, 'Riohacha', 304987, 18);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (23, 'Sincelejo', 294599, 28);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (24, 'Armenia', 292751, 24);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (25, 'Popayán', 290653, 10);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (26, 'Yopal', 173036, 9);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (27, 'Florencia', 170632, 8);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (28, 'Tunja', 167890, 6);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (29, 'Girardot', 156496, 14);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (30, 'Quibdó', 154126, 12);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (31, 'Duitama', 121347, 6);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (32, 'Envigado', 120493, 2);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (33, 'Tumaco', 117674, 21);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (34, 'Dosquebradas', 115894, 25);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (35, 'Turbo', 112757, 2);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (36, 'Sogamoso', 111124, 6);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (37, 'Maicao', 109960, 18);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (38, 'Zipaquirá', 108574, 14);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (39, 'Pitalito', 103541, 17);
+INSERT INTO ciudad (id_ciudad, nombre, poblacion, id_departamento) VALUES (40, 'Leticia', 101688, 1);

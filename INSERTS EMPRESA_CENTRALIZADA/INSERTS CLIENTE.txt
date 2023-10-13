@@ -1,0 +1,71 @@
+CREATE TABLE cliente (
+    id_cliente NUMBER(10) NOT NULL,
+    nombre     VARCHAR2(50) NOT NULL,
+    correo     VARCHAR2(50) NOT NULL,
+    telefono   VARCHAR2(20),
+    direccion  VARCHAR2(100),
+    id_ciudad  NUMBER(10) NOT NULL
+)
+LOGGING;
+
+ALTER TABLE cliente ADD CONSTRAINT cliente_pk PRIMARY KEY ( id_cliente );
+
+ALTER TABLE cliente ADD CONSTRAINT index_1 UNIQUE ( correo );
+
+ALTER TABLE cliente
+    ADD CONSTRAINT fk_cliente_ciudad FOREIGN KEY ( id_ciudad )
+        REFERENCES ciudad ( id_ciudad )
+    NOT DEFERRABLE;
+
+INSERTS
+
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (1, 'Laura González', 'laura.gonzalez@email.com', '3147691370', 'Calle 123 #456', 1);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (2, 'Carlos Pérez', 'carlos.perez@email.com', '3104205628', 'Avenida Principal #789', 2);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (3, 'María Rodríguez', 'maria.rodriguez@email.com', '3009876543', 'Carrera 45 #101', 3);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (4, 'Juan Martínez', 'juan.martinez@email.com', '3015557777', 'Calle 67 #22', 4);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (5, 'Sofía López', 'sofia.lopez@email.com', '3108889999', 'Calle 89 #33', 5);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (6, 'Andrés Sánchez', 'andres.sanchez@email.com', '3161234567', 'Carrera 21 #67', 6);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (7, 'Ana Jiménez', 'ana.jimenez@email.com', '3139876543', 'Avenida 34 #45', 7);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (8, 'Diego Gómez', 'diego.gomez@email.com', '3125551234', 'Calle 56 #12', 8);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (9, 'Valentina Torres', 'valentina.torres@email.com', '3147778888', 'Carrera 12 #99', 9);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (10, 'Lucas Silva', 'lucas.silva@email.com', '3101234567', 'Avenida 56 #33', 10);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (11, 'Eva Ramírez', 'eva.ramirez@email.com', '3119876543', 'Calle 78 #45', 11);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (12, 'Miguel Castillo', 'miguel.castillo@email.com', '3126669999', 'Carrera 23 #67', 12);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (13, 'Lorena Montes', 'lorena.montes@email.com', '3131112222', 'Avenida 56 #34', 13);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (14, 'Javier González', 'javier.gonzalez@email.com', '3159990000', 'Calle 89 #12', 14);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (15, 'Ana María Cárdenas', 'ana.cardenas@email.com', '3105551111', 'Carrera 34 #33', 15);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (16, 'Roberto Vélez', 'roberto.velez@email.com', '3149992222', 'Avenida 12 #45', 16);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (17, 'Carmen Mendoza', 'carmen.mendoza@email.com', '3126665555', 'Calle 45 #34', 17);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (18, 'Ricardo Ortega', 'ricardo.ortega@email.com', '3158887777', 'Carrera 67 #56', 18);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (19, 'Luisa Soto', 'luisa.soto@email.com', '3102227777', 'Avenida 34 #67', 19);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (20, 'Gabriel Castillo', 'gabriel.castillo@email.com', '3131110000', 'Calle 78 #99', 20);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (21, 'Sofía Fernández', 'sofia.fernandez@email.com', '3127775555', 'Carrera 21 #12', 21);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (22, 'Andrea Paredes', 'andrea.paredes@email.com', '3143339999', 'Avenida 12 #45', 22);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (23, 'Jorge López', 'jorge.lopez@email.com', '3154440000', 'Calle 56 #78', 23);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (24, 'Natalia Vargas', 'natalia.vargas@email.com', '3101117777', 'Carrera 67 #33', 24);
+INSERT INTO cliente (id_cliente, nombre, correo, telefono, direccion, id_ciudad)
+VALUES (25, 'Daniel Gómez', 'daniel.gomez@email.com', '3133334444', 'Avenida 45 #21', 25);
